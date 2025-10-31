@@ -94,6 +94,10 @@ if(build_wizard AND CMAKE_SYSTEM MATCHES "Darwin")
   set(MACOS_VERSION_MIN 11.0)
 endif()
 
+if(CMAKE_CXX_COMPILER_ID MATCHES "GCC|.*Clang")
+  set(CMAKE_CXX_FLAGS "-pipe")
+endif()
+
 # use C++17 standard for compiling (unless very new Clang is present)
 if(
   (CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang" AND
