@@ -642,9 +642,9 @@ size_t Portable::recodeUtf8StringToW(const QCString &inputStr,uint16_t **outBuf)
 // We need to do this part last as including filesystem.hpp earlier
 // causes the code above to fail to compile on Windows.
 
-#include "filesystem.hpp"
+#include <filesystem>
 
-namespace fs = ghc::filesystem;
+namespace fs = std::filesystem;
 
 std::ofstream Portable::openOutputStream(const QCString &fileName,bool append)
 {
