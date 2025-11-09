@@ -15,10 +15,11 @@
 
 #define NOMINMAX
 #define WIN32_LEAN_AND_MEAN // optional
-#include "filesystem.hpp"
+#include <filesystem>
+#include <algorithm>
 #include "fileinfo.h"
 
-namespace fs = ghc::filesystem;
+namespace fs = std::filesystem;
 
 size_t FileInfo::size() const
 {
