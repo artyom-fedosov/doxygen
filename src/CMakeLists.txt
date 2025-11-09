@@ -2,7 +2,6 @@
 
 include_directories(
     ${PROJECT_SOURCE_DIR}/deps/TinyDeflate
-    ${PROJECT_SOURCE_DIR}/deps/filesystem
     ${PROJECT_SOURCE_DIR}/deps/libmd5
     ${PROJECT_SOURCE_DIR}/deps/liblodepng
     ${PROJECT_SOURCE_DIR}/deps/libmscgen
